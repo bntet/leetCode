@@ -1,11 +1,11 @@
 package com.xzq.medium;
 
-import java.lang.reflect.Array;
-import java.util.ArrayList;
 import java.util.HashSet;
-import java.util.List;
 import java.util.Set;
 
+/**
+ * 3.无重复字符的最长子串
+ */
 public class leetCode_3 {
     public static void main(String[] args) {
         int num = lengthOfLongestSubstring("abcabcbb");

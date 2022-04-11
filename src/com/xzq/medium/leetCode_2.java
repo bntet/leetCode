@@ -1,7 +1,7 @@
 package com.xzq.medium;
 
 /**
- * 两数相加
+ * 2.两数相加
  */
 public class leetCode_2 {
     public static void main(String[] args) {
