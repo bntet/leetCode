@@ -6,8 +6,7 @@ import java.util.Queue;
 
 public class TreeMaxNode {
 
-    //全局最小值
-    public static int preValue = Integer.MIN_VALUE;
+
 
     public static void main(String[] args) {
         Node<Integer> integerNode = new Node<Integer>(2);
@@ -20,9 +19,7 @@ public class TreeMaxNode {
 //        int i = treeMaxNode(integerNode);
 //        System.out.println(i);
 
-        /**检查是否是搜搜二叉树--递归 */
-//        Boolean aBoolean = checkBst(integerNode);
-//        System.out.println(aBoolean);
+
 
         /**检查是否完全二叉树*/
         Boolean aBoolean = checkCBT(integerNode);
@@ -83,38 +80,12 @@ public class TreeMaxNode {
         return max;
     }
 
-    /**
-     * 检查是否搜索二叉树--递归
-     * @param head
-     * @return
-     */
-    public static Boolean checkBst(Node head){
-        if(head == null){
-            return true;
-        }
-        Boolean isLeftBst = checkBst(head.left);
-        if(!isLeftBst){
-            return false;
-        }
-        if((int)head.value <= preValue){
-            return false;
-        }else{
-            preValue = (int)head.value;
-        }
-        return checkBst(head.right);
-    }
 
-    /**
-     * 检查是否搜索二叉树--不递归，使用栈
-     * @param head
-     * @return
-     */
-    public static Boolean checkBst2(Node head){
-        return true;
-    }
 
     /**
      * 检查是否完全二叉树
+     * 1.任意节点 有右节点 没有左节点 直接false
+     * 2.条件1不违规，如果遇到第一个左右子节点不全，后续皆为叶节点
      * @param head
      * @return
      */
@@ -130,7 +101,7 @@ public class TreeMaxNode {
             r = head.right;
             if(
                     (hasPerfectChild && (l != null || r != null)) ||     //当已经遇到左右孩子节点不全的节点时， 如果左右孩子还有值，则不是完全二叉树
-                    (l == null && r != null))                            //当左孩子为 null, 有孩子不为 null, 则不是完全二叉树
+                    (l == null && r != null))                            //当左孩子为 null, 右孩子不为 null, 则不是完全二叉树
             {
                 return false;
             }
@@ -146,6 +117,17 @@ public class TreeMaxNode {
                 hasPerfectChild = true;
             }
         }
+        return true;
+    }
+
+    /**
+     * 检查是否平衡二叉树
+     * 1.对于任何一个子树来说，左树与右树的高度差不超过1
+     * @param head
+     * @return
+     */
+    public static Boolean checkBalance(Node head){
+
         return true;
     }
 }
