@@ -1,5 +1,9 @@
 package com.xzq.tree;
 
+/**
+ * 检查是否搜索二叉树
+ * 1.每一颗子树左侧节点比它小，右侧比它大
+ */
 public class CheckBinarySearchTree {
 
     //全局最小值
