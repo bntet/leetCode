@@ -43,4 +43,8 @@ public class CheckFullBinaryTree {
         int nodes = leftNode.nodes + rightNode.nodes + 1;
         return new Info(height, nodes);
     }
+
+    public void testMargeBranch(){
+
+    }
 }
