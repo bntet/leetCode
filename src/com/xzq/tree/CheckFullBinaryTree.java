@@ -45,6 +45,6 @@ public class CheckFullBinaryTree {
     }
 
     public void testMargeBranch(){
-
+        System.out.println("test");
     }
 }
