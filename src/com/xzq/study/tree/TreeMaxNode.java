@@ -1,4 +1,4 @@
-package com.xzq.tree;
+package com.xzq.study.tree;
 
 import java.util.HashMap;
 import java.util.LinkedList;

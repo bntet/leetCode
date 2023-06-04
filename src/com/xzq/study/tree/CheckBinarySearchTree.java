@@ -1,4 +1,4 @@
-package com.xzq.tree;
+package com.xzq.study.tree;
 
 /**
  * 检查是否搜索二叉树

@@ -1,4 +1,4 @@
-package com.xzq.tree;
+package com.xzq.study.tree;
 
 public class Node<T> {
     T value;

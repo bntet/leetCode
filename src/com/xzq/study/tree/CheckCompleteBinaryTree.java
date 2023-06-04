@@ -1,4 +1,4 @@
-package com.xzq.tree;
+package com.xzq.study.tree;
 
 /**
  * 完全二叉树

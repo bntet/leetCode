@@ -1,4 +1,4 @@
-package com.xzq.tree;
+package com.xzq.study.tree;
 
 /**
  * 满二叉树
@@ -32,7 +32,6 @@ public class CheckFullBinaryTree {
             this.nodes = nodes;
         }
     }
-
     public static Info f(Node x){
         if(x == null){
             return new Info(0, 0);
@@ -46,5 +45,7 @@ public class CheckFullBinaryTree {
 
     public void testMargeBranch(){
         System.out.println("test");
+        System.out.println("test dev");
+        System.out.println("test_dev_i18n");
     }
 }
