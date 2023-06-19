@@ -1,4 +1,4 @@
-package com.xzq.study.graph;
+package com.xzq.study.graph.template;
 
 
 import java.util.HashMap;

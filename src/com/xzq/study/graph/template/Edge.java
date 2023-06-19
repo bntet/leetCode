@@ -1,6 +1,7 @@
-package com.xzq.study.graph;
+package com.xzq.study.graph.template;
 
 /**
+ * 边结构
  * 边:有向边
  * 无向边：两个有向边组合
  */

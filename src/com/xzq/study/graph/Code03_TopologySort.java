@@ -1,11 +1,15 @@
 package com.xzq.study.graph;
 
+import com.xzq.study.graph.template.Graph;
+import com.xzq.study.graph.template.Node;
+
 import java.util.*;
 
 /**
  * 拓扑排序
+ * 适用范围：要求有向图， 且有入度为0的节点， 且没有环
  * 1.找到入度为0的点
- * 2.去除 入度为0的点 的影响
+ * 2.去除 入度为0的点 的影响（即 去除入度为0的点指向下一个点的边）
  * 3.找下一个入度为0的点
  */
 public class Code03_TopologySort {
