@@ -22,14 +22,19 @@ public class Code06_Dijkstra {
         如果map中，没有该记录，则表示head到该点的距离为正无穷
          */
         HashMap<Node, Integer> distanceMap = new HashMap<>();
+        //存放头节点，头节点到自己的距离为：0
         distanceMap.put(head, 0);
 
         //存放已经计算过最短权值的节点, 后续不在计算
         HashSet<Node> selectNodes = new HashSet<>();
 
+        //第一次计算最小权值，其实distanceMap只有一个头节点,
         Node minNode = getMinDistanceAndUnselectNode(distanceMap, selectNodes);
+
         while (minNode != null){
             Integer distance = distanceMap.get(minNode);
+
+            //遍历节点发散的边
             for (Edge edge : minNode.edges) {
                 Node toNode = edge.to;
                 if(!distanceMap.containsKey(toNode)){
@@ -52,6 +57,8 @@ public class Code06_Dijkstra {
     public static Node getMinDistanceAndUnselectNode(HashMap<Node, Integer> distanceMap, HashSet<Node> selectNodes){
         Node minNode = null;
         int minDistance = Integer.MAX_VALUE;
+
+        //遍历distanceMap
         for (Map.Entry<Node, Integer> entry : distanceMap.entrySet()) {
             Node key = entry.getKey();
             int value = entry.getValue();
